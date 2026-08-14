@@ -1,0 +1,28 @@
+{
+  "manifest_version": 3,
+  "name": "Shopping Footprint",
+  "version": "1.0.0",
+  "description": "A browser extension that displays estimated carbon emissions for products while shopping online.",
+  "permissions": [
+    "activeTab",
+    "storage"
+  ],
+  "host_permissions": [
+    "https://www.amazon.in/*",
+    "https://www.amazon.com/*"
+  ],
+  "content_scripts": [
+    {
+      "matches": [
+        "https://www.amazon.in/*",
+        "https://www.amazon.com/*"
+      ],
+      "js": [
+        "content.js"
+      ]
+    }
+  ],
+  "action": {
+    "default_title": "Shopping Footprint"
+  }
+}
